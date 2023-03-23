@@ -1,1 +1,1 @@
-https://aviasales-azizaomis.vercel.app
+https://aviasales-azizaomis.vercel.app 
