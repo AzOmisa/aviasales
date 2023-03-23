@@ -1,0 +1,22 @@
+.App {
+  max-width: 754px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.Logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.Main {
+  display: flex;
+  justify-content: space-between;
+}
+.AboutTickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

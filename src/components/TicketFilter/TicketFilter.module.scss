@@ -1,0 +1,46 @@
+.FilterList {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 502px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #dfe5ec;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.FilterList::before {
+  position: absolute;
+  left: 167px;
+  content: '';
+  width: 1px;
+  height: 49px;
+  background-color: #dfe5ec;
+}
+.FilterList::after {
+  position: absolute;
+  right: 167px;
+  content: '';
+  width: 1px;
+  height: 49px;
+  background-color: #dfe5ec;
+}
+.FilterItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 167px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+.Active {
+  background: #2196f3;
+  color: #ffffff;
+}

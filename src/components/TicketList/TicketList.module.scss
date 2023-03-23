@@ -1,0 +1,22 @@
+.ShowMore {
+  width: 502px;
+  height: 50px;
+  background: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.ShowMore:hover {
+  transform: scale(0.95);
+}

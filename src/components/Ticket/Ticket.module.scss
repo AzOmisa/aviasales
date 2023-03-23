@@ -1,0 +1,59 @@
+.Ticket {
+  width: 502px;
+  height: 184px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+}
+.Price {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: #2196f3;
+}
+.Cell {
+  width: 141px;
+  height: 39px;
+}
+.Row {
+  width: 462px;
+  height: 39px;
+  display: flex;
+  justify-content: space-between;
+}
+.Table {
+  width: 462px;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Description {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #a0b0b9;
+}
+.Value {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #4a4a4a;
+}
