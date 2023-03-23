@@ -1,6 +1,8 @@
 .ShowMore {
-  width: 502px;
+  width: 232px;
   height: 50px;
+  margin-left: auto;
+  margin-right: auto;
   background: #2196f3;
   display: flex;
   justify-content: center;
@@ -19,4 +21,9 @@
 }
 .ShowMore:hover {
   transform: scale(0.95);
+}
+@media (min-width: 1024px) {
+  .ShowMore {
+    width: 502px;
+  }
 }

@@ -1,6 +1,6 @@
 .Ticket {
-  width: 502px;
-  height: 184px;
+  width: 300px;
+  height: 193px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -23,20 +23,19 @@
   color: #2196f3;
 }
 .Cell {
-  width: 141px;
+  width: 130px;
   height: 39px;
 }
 .Row {
-  width: 462px;
-  height: 39px;
+  width: 130px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 .Table {
-  width: 462px;
-  height: 88px;
+  width: 260px;
+  height: 117px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 .Description {
@@ -56,4 +55,23 @@
   font-size: 14px;
   line-height: 21px;
   color: #4a4a4a;
+}
+@media (min-width: 1024px) {
+  .Ticket {
+    width: 502px;
+    height: 184px;
+  }
+  .Cell {
+    width: 141px;
+  }
+  .Row {
+    width: 462px;
+    height: 39px;
+    flex-direction: row;
+  }
+  .Table {
+    width: 462px;
+    height: 88px;
+    flex-direction: column;
+  }
 }

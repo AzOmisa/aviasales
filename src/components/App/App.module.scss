@@ -1,22 +1,40 @@
 .App {
-  max-width: 754px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 .Logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .Main {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 .AboutTickets {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .App {
+    max-width: 754px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .Logo {
+    margin-bottom: 30px;
+  }
+  .Main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .AboutTickets {
+    margin-top: 0;
+  }
 }

@@ -1,9 +1,10 @@
 .FilterList {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  width: 502px;
-  height: 50px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 232px;
+  height: 90px;
   background: #fff;
   border: 1px solid #dfe5ec;
   border-radius: 5px;
@@ -12,25 +13,25 @@
 }
 .FilterList::before {
   position: absolute;
-  left: 167px;
+  top: 29px;
   content: '';
-  width: 1px;
-  height: 49px;
+  height: 1px;
+  width: 232px;
   background-color: #dfe5ec;
 }
 .FilterList::after {
   position: absolute;
-  right: 167px;
+  bottom: 29px;
   content: '';
-  width: 1px;
-  height: 49px;
+  height: 1px;
+  width: 232px;
   background-color: #dfe5ec;
 }
 .FilterItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 167px;
+  min-height: 28px;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -43,4 +44,27 @@
 .Active {
   background: #2196f3;
   color: #ffffff;
+}
+@media (min-width: 1024px) {
+  .FilterList {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 502px;
+    height: 50px;
+  }
+  .FilterList::before {
+    top: 0;
+    left: 167px;
+    width: 1px;
+    height: 49px;
+  }
+  .FilterList::after {
+    bottom: 0;
+    right: 167px;
+    width: 1px;
+    height: 49px;
+  }
+  .FilterItem {
+    width: 167px;
+  }
 }
