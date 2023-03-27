@@ -1,12 +1,12 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { toggleFilter } from '../../redux/moveNumberSlice'
 import { moveNumberConstants } from '../../services/constants'
+import { toggleFilter } from '../../store/moveNumberSlice'
 
 import classes from './MoveNumber.module.scss'
 
-export default function MoveNumber() {
+const MoveNumber = () => {
   const dataOfFilters = useSelector((state) => state.moveNumber)
   const dispatch = useDispatch()
   const moves = Object.keys(moveNumberConstants)
@@ -14,9 +14,9 @@ export default function MoveNumber() {
     return (
       <li key={item} className={classes.FilterItem} onClick={() => dispatch(toggleFilter(moveNumberConstants[item]))}>
         <input className={classes.Checkbox} type="checkbox" checked={dataOfFilters[item]} readOnly />
-        <span htmlFor={item} className={classes.FilterLabel}>
+        <label htmlFor={item} className={classes.FilterLabel}>
           {moveNumberConstants[item]}
-        </span>
+        </label>
       </li>
     )
   })
@@ -27,3 +27,4 @@ export default function MoveNumber() {
     </div>
   )
 }
+export default MoveNumber

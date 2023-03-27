@@ -5,8 +5,8 @@ import { depArrTime, durationTime, stopsCounter } from '../../services/ticketFns
 
 import classes from './Ticket.module.scss'
 
-export default function Ticket({ price, carrier, segments }) {
-  function Cell({ description, value }) {
+const Ticket = ({ price, carrier, segments }) => {
+  const Cell = ({ description, value }) => {
     return (
       <div className={classes.Cell}>
         <span className={classes.Description}>{description}</span>
@@ -38,3 +38,4 @@ export default function Ticket({ price, carrier, segments }) {
     </div>
   )
 }
+export default Ticket

@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Alert, Space } from 'antd'
 import { v4 as uuidv4 } from 'uuid'
 
-import { showMore } from '../../redux/ticketsSlice'
 import { filterConstants } from '../../services/constants'
 import { sortByMoves, sortTickets } from '../../services/sortFns'
+import { showMore } from '../../store/ticketsSlice'
 import Ticket from '../Ticket'
 
 import classes from './TicketList.module.scss'
 
-export default function TicketList() {
+const TicketList = () => {
   const ticketData = useSelector((state) => state.tickets)
   const selectedFilter = useSelector((state) => state.filter.selected)
   const moveNumberData = useSelector((state) => state.moveNumber)
@@ -20,17 +20,12 @@ export default function TicketList() {
   const [data, setData] = useState([])
   const [error, setError] = useState(false)
   useEffect(() => {
-    let newData
-    switch (selectedFilter) {
-      case filterConstants.cheap:
-        newData = sortTickets(ticketsData).cheapArr
-        break
-      case filterConstants.fast:
-        newData = sortTickets(ticketsData).fastArr
-        break
-      default:
-        newData = ticketsData
-        break
+    let newData = ticketsData
+    if (selectedFilter === filterConstants.cheap) {
+      newData = sortTickets(ticketsData).cheapArr
+    }
+    if (selectedFilter === filterConstants.fast) {
+      newData = sortTickets(ticketsData).fastArr
     }
     if (all) {
       setError(false)
@@ -74,7 +69,7 @@ export default function TicketList() {
       ) : (
         <React.Fragment>
           <ul>{tickets}</ul>
-          <button className={classes.ShowMore} onClick={() => dispatch(showMore())}>
+          <button className={classes.ShowMore} type="button" onClick={() => dispatch(showMore())}>
             Показать еще 5 билетов!
           </button>
         </React.Fragment>
@@ -82,3 +77,4 @@ export default function TicketList() {
     </div>
   )
 }
+export default TicketList

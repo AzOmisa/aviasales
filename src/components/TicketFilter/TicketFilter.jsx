@@ -1,11 +1,11 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { onFilterClick } from '../../redux/filterSlice'
 import { filterConstants } from '../../services/constants'
+import { onFilterClick } from '../../store/filterSlice'
 
 import classes from './TicketFilter.module.scss'
-export default function TicketFilter() {
+const TicketFilter = () => {
   const dispatch = useDispatch()
   const selectedFilter = useSelector((state) => state.filter.selected)
   const filtersArr = Object.values(filterConstants)
@@ -29,3 +29,4 @@ export default function TicketFilter() {
   })
   return <ul className={classes.FilterList}>{filters}</ul>
 }
+export default TicketFilter

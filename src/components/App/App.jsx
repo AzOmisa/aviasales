@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Alert, Space, Spin } from 'antd'
 
-import { fetchId, fetchPackOfTickets } from '../../redux/ticketsSlice'
+import { fetchId, fetchPackOfTickets } from '../../store/ticketsSlice'
 import MoveNumber from '../MoveNumber/'
 import TicketFilter from '../TicketFilter'
 import TicketList from '../TicketList'
@@ -11,7 +11,7 @@ import Logo from './Logo.svg'
 
 import classes from './App.module.scss'
 
-function App() {
+const App = () => {
   const allData = useSelector((state) => state.tickets)
   const dispatch = useDispatch()
   useEffect(() => {
